@@ -1,0 +1,44 @@
+/* Essential fixes for your students.php */
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.group:hover .opacity-0 {
+    opacity: 1 !important;
+}
+
+/* Image hover effects */
+img.object-cover {
+    transition: all 0.3s ease;
+}
+
+.group:hover img.object-cover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* File input styling */
+input[type="file"] + label button {
+    transition: all 0.2s ease;
+}
+
+/* Emergency default image */
+img[src*="student_default.jpg"] {
+    width: 144px !important;  /* w-36 */
+    height: 144px !important; /* h-36 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 24px !important;  /* rounded-3xl */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+img[src*="student_default.jpg"]:before {
+    content: "👦";
+}
